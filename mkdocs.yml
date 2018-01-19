@@ -1,0 +1,91 @@
+site_name: codebicycle
+site_description: bicycle for the mind
+site_url: 'http://codebicycle.com'
+site_author: 'Andrei Chelaru'
+
+docs_dir: 'docs'
+
+pages:
+  - Python: index.md
+  - Git: git.md
+  - Linux: linux.md
+  - Notes: notes.md
+  - SOLID: solid.md
+  - Archve:
+      - Session Fixation: archive/session-fixation.md
+      - EXT4 File Permissions: archive/ext4-file-permissions.md
+
+theme:
+  name: material
+  custom_dir: 'themes/material'
+
+  # Content from themes/material/material/mkdocs_theme.yml
+  # Language for theme localization
+  language: en
+
+  # Text direction (can be ltr or rtl)
+  direction: ltr
+
+  # Feature flags for functionality that alters behavior significantly, and thus
+  # may be a matter of taste
+  feature:
+
+    # Another layer on top of the main navigation for larger screens in the form
+    # of tabs, especially useful for larger documentation projects
+    tabs: false
+
+  # Sets the primary and accent color palettes as defined in the Material Design
+  # documentation - possible values can be looked up in the getting started guide
+  palette:
+
+    # Primary color used for header, sidebar and links, default: indigo
+    primary: teal
+
+    # Accent color for highlighting user interaction, default: indigo
+    accent: teal
+
+  # Fonts used by Material, automatically loaded from Google Fonts - see the site
+  # for a list of available fonts
+  font:
+
+    # Default font for text
+    text: Roboto
+
+    # Fixed-width font for code listings
+    code: Roboto Mono
+
+  # Favicon to be rendered
+  favicon: 'assets/images/favicon.ico'
+
+  # The logo of the documentation shown in the header and navigation can either
+  # be a Material Icon ligature (see https://material.io/icons/) or an image URL
+  logo:
+    icon: code
+
+
+  # Material includes the search in the header as a partial, not as a separate
+  # template, so it's correct that search.html is missing
+  include_search_page: false
+
+  # Material doesn't use MkDocs search functionality but provides its own. For
+  # this reason, only the search index needs to be built
+  search_index_only: true
+
+  # Static pages to build
+  static_templates:
+    - 404.html
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/codebicycle'
+    - type: 'linkedin'
+      link: 'https://linkedin.com/in/andrei-chelaru'
+    - type: 'envelope'
+      link: 'mailto:codebicycle@gmail.com'
+
+markdown_extensions:
+  - codehilite:
+      guess_lang: true
+  - pymdownx.magiclink:
+  - nl2br:
