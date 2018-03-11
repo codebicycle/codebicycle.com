@@ -227,6 +227,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#diff" title="Diff" class="md-nav__link">
+    Diff
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" title="Resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -361,6 +375,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#diff" title="Diff" class="md-nav__link">
+    Diff
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" title="Resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -382,6 +410,20 @@
 <blockquote>
 <p>Rebasing is like saying, “I want to base my changes on what everybody has already done.”</p>
 </blockquote>
+<div class="codehilite"><pre><span></span>git checkout a6ba3a1 README.md
+</pre></div>
+
+
+<p>Log current branch</p>
+<div class="codehilite"><pre><span></span>git log --oneline
+</pre></div>
+
+
+<p>Log all branches</p>
+<div class="codehilite"><pre><span></span>git log --oneline --all --decorate --graph
+</pre></div>
+
+
 <p>Undo all fetches from remote A simply by removing this remote:</p>
 <div class="codehilite"><pre><span></span>git remote remove A
 
@@ -400,6 +442,11 @@ git fetch A &lt;name of branch&gt;
 </pre></div>
 
 
+<p>Remove any local remote-tracking branches which no longer exist on the remote</p>
+<div class="codehilite"><pre><span></span>git fetch --prune
+</pre></div>
+
+
 <h2 id="stash">Stash</h2>
 <div class="codehilite"><pre><span></span>git stash
 </pre></div>
@@ -411,7 +458,8 @@ git fetch A &lt;name of branch&gt;
 
 
 <h2 id="push">Push</h2>
-<div class="codehilite"><pre><span></span>git push origin master
+<div class="codehilite"><pre><span></span>git push &lt;where&gt; &lt;what&gt;
+git push origin master
 </pre></div>
 
 
@@ -419,6 +467,47 @@ git fetch A &lt;name of branch&gt;
 <div class="codehilite"><pre><span></span>git fetch origin branch
 git merge --ff-only origin/deploy
 </pre></div>
+
+
+<h2 id="diff">Diff</h2>
+<p>Differences between last known state and current state.</p>
+<p>Diff between staging area and working directory</p>
+<div class="codehilite"><pre><span></span>git diff
+git difftool
+</pre></div>
+
+
+<p>Diff between last commit on the current branch and working directory</p>
+<div class="codehilite"><pre><span></span>git diff HEAD
+git difftool HEAD
+</pre></div>
+
+
+<p>Diff between last commit on the current branch and staging area</p>
+<div class="codehilite"><pre><span></span>git diff --staged HEAD
+</pre></div>
+
+
+<p>Diff between a given commit and the latest one</p>
+<div class="codehilite"><pre><span></span>git diff a6ba3a1 HEAD
+git diff HEAD~3 HEAD
+</pre></div>
+
+
+<p>Diff between branches</p>
+<div class="codehilite"><pre><span></span>git diff master origin/master
+</pre></div>
+
+
+<p>Limit to one file</p>
+<div class="codehilite"><pre><span></span>git diff -- README.md
+</pre></div>
+
+
+<h2 id="resources">Resources</h2>
+<ul>
+<li>Git Essentials LiveLessons</li>
+</ul>
                 
                   
                 
