@@ -6,7 +6,7 @@ site_author: 'Andrei Chelaru'
 docs_dir: 'docs'
 
 pages:
-  - Python: index.md
+  - Python: python.md
   - Git: git.md
   - Linux: linux.md
   - Notes: notes.md

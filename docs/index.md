@@ -1,1 +1,0 @@
-/home/ada/sandbox/markdown/codebicycle.com/python.md
