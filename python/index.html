@@ -647,15 +647,25 @@
 <a href="http://docs.python-guide.org/en/latest/">The Hitchhiker’s Guide to Python</a></p>
 <hr />
 <p>Virtual environment</p>
-<div class="codehilite"><pre><span></span><span class="c1"># virtualenvwrapper</span>
-mkvirtualenv --python<span class="o">=</span><span class="sb">`</span>which python3<span class="sb">`</span> EnvName
+<div class="codehilite"><pre><span></span>pip install --upgrade pipenv
+</pre></div>
+
+
+<p>Install from Pipfile, if there is one:<br />
+    pipenv install</p>
+<div class="codehilite"><pre><span></span>pipenv --three
+pipenv shell
+
+:::bash
+# virtualenvwrapper
+mkvirtualenv --python=`which python3` EnvName
 workon EnvName
 
-<span class="c1"># Python&#39;s venv module</span>
+# Python&#39;s venv module
 python3 -m venv virtual_environment_name
-<span class="c1"># -m module-name</span>
-<span class="nb">cd</span> virtual_environment_name
-<span class="nb">source</span> bin/activate
+# -m module-name
+cd virtual_environment_name
+source bin/activate
 </pre></div>
 
 
