@@ -672,27 +672,27 @@ Etc.
 
 
 <p>List comparison techniques:</p>
-<div class="codehilite"><pre><span></span># identity matters
-a is b
+<div class="codehilite"><pre><span></span><span class="c1"># identity matters</span>
+<span class="n">a</span> <span class="ow">is</span> <span class="n">b</span>
 
-# order matters; duplicates matter
-a == b
+<span class="c1"># order matters; duplicates matter</span>
+<span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
 
-# order ignored; duplicates matter
-Counter(a) == Counter(b)
+<span class="c1"># order ignored; duplicates matter</span>
+<span class="n">Counter</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="n">Counter</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 
-# both order and duplicates ignored
-set(a) == set(b)
+<span class="c1"># both order and duplicates ignored</span>
+<span class="nb">set</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 
 
 <p>Cached computation</p>
-<div class="codehilite"><pre><span></span>@property
-def args(self):
-    if self._args is None:
-        parser = self.get_parser()
-        self._args = parser.parse_args()
-    return self._args
+<div class="codehilite"><pre><span></span><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_args</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">parser</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parser</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_args</span>
 </pre></div>
 
 
