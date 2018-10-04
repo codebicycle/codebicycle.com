@@ -698,25 +698,25 @@ def args(self):
 
 <hr />
 <p>Virtual environment</p>
-<div class="codehilite"><pre><span></span>pip install --upgrade pipenv
-</pre></div>
+<div class="codehilite"><pre><span></span><span class="c1"># Pipenv</span>
+pip install --upgrade pipenv
 
-
-<p>Install from Pipfile, if there is one:<br />
-    pipenv install</p>
-<div class="codehilite"><pre><span></span>pipenv --three
+pipenv --three
 pipenv shell
 
-:::bash
-# virtualenvwrapper
-mkvirtualenv --python=`which python3` EnvName
+<span class="c1"># install from Pipfile, if there is one:</span>
+pipenv install
+
+
+<span class="c1"># Virtualenvwrapper</span>
+mkvirtualenv --python<span class="o">=</span><span class="sb">`</span>which python3<span class="sb">`</span> EnvName
 workon EnvName
 
-# Python&#39;s venv module
+<span class="c1"># Python&#39;s venv module</span>
 python3 -m venv virtual_environment_name
-# -m module-name
-cd virtual_environment_name
-source bin/activate
+<span class="c1"># -m module-name</span>
+<span class="nb">cd</span> virtual_environment_name
+<span class="nb">source</span> bin/activate
 </pre></div>
 
 
